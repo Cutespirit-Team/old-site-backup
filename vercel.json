@@ -1,13 +1,12 @@
 {
-  "functions": {
-    "**/*.php": {
-      "runtime": "vercel-php@0.9.0"
-    }
-  },
+  "builds": [
+    { "src": "**/*.php", "use": "vercel-php@0.9.0" },
+    { "src": "**/*.{css,scss,js,svg,jpg,jpeg,png,gif,webp,ico,html,woff,woff2,ttf,eot,json,xml,txt,md,pdf}", "use": "@vercel/static" }
+  ],
   "routes": [
     { "src": "/", "dest": "/index.php" },
-    { "src": "/aboutus(/)?$", "dest": "/aboutus/index.php" },
-    { "src": "/a(/)?$", "dest": "/a/index.php" },
+    { "src": "/aboutus/?$", "dest": "/aboutus/index.php" },
+    { "src": "/a/?$", "dest": "/a/index.php" },
     { "handle": "filesystem" }
   ]
 }
