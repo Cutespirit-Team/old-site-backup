@@ -1,0 +1,9 @@
+# 不部署的部分
+chat
+employee-manage
+
+# 不需要上傳的檔案
+.git
+*.zip
+README.txt
+LICENSE.txt
