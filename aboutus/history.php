@@ -50,7 +50,7 @@
 								<hr>
 
 								<?php //latest
-									$file_path = "teamhistory.md";
+									$file_path = __DIR__ . "/teamhistory.md";
 									if(file_exists($file_path)){
 									        $fp = fopen($file_path,"r");
 									        $str = "";
@@ -60,7 +60,7 @@
 									                array_push($arr,$str);
 										}
 										echo '<div class="col-4"><div class="row gtr-50 gtr-uniform">';
-									        for ($i = count($arr); $i>= 2; $i--){
+									        for ($i = count($arr)-1; $i>= 2; $i--){
 								        	        for ($j = 1; $j<count($arr[$i])-1; $j++){
 								                	        if (isset($arr[$i][$j])){
 								                        	        if ($j == 1){

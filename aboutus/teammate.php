@@ -6,7 +6,7 @@
 								</header>
 								<hr>
 								<?php
-									$file_path = "teammate.md";
+									$file_path = __DIR__ . "/teammate.md";
 									if(file_exists($file_path)){
 									        $fp = fopen($file_path,"r");
 									        $str = "";
@@ -15,7 +15,7 @@
 									                $str = explode("|", fgets($fp));
 									                array_push($arr,$str);
 									        }
-									        for ($i= 2;$i<=count($arr); $i++){
+									        for ($i= 2;$i<count($arr); $i++){
 									                for ($j = 1; $j<count($arr[$i])-1; $j++){
 									                        if (isset($arr[$i][$j])){
 													if ($j == 2){
