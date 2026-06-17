@@ -42,9 +42,9 @@
 							<?php
 							$str = 'class=active';
 							$arr = array($active=>$str);
-							echo '<li '.$arr['index'].'><a href="index.php">團隊介紹</a></li>';
-							echo '<li '.$arr['history'].'><a href="history.php">團隊歷史</a></li>';
-							echo '<li '.$arr['teammate'].'><a href="teammate.php">團隊成員</a></li>';
+							echo '<li '.($arr['index'] ?? '').'><a href="index.php">團隊介紹</a></li>';
+							echo '<li '.($arr['history'] ?? '').'><a href="history.php">團隊歷史</a></li>';
+							echo '<li '.($arr['teammate'] ?? '').'><a href="teammate.php">團隊成員</a></li>';
 							//echo '<li '.$arr['plan'].'><a href="plan.php">團隊未來規劃</a></li>';
 							?>
 						</ul>
@@ -60,9 +60,9 @@
 <?php
 $file_path = "form.txt";
 $timenow = date('Y_m_d_H_i_s');
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+$name = $_POST['name'] ?? '';
+$email = $_POST['email'] ?? '';
+$message = $_POST['message'] ?? '';
 if (($name == "" and $email == "" and $message == "") == False){
         if(file_exists($file_path)){
                 $fp = fopen($file_path,"r");
