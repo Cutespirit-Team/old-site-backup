@@ -1,5 +1,5 @@
 <?php
-$file_path = __DIR__ . "/school.csv"; //檔案名稱
+$file_path = "school.csv"; //檔案名稱
 if(file_exists($file_path)){ //檔案是否存在
 	$fp = fopen($file_path,"r"); //檔案以唯獨開啟
 	$str = ""; 

@@ -6,7 +6,7 @@
 								</header>
 								<hr>
 								<?php
-									$file_path = __DIR__ . "/teammate.md";
+									$file_path = "teammate.md";
 									if(file_exists($file_path)){
 									        $fp = fopen($file_path,"r");
 									        $str = "";

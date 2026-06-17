@@ -50,7 +50,7 @@
 								<hr>
 
 								<?php //latest
-									$file_path = __DIR__ . "/teamhistory.md";
+									$file_path = "teamhistory.md";
 									if(file_exists($file_path)){
 									        $fp = fopen($file_path,"r");
 									        $str = "";
